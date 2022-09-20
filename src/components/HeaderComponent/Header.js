@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from 'react'
 import "../HeaderComponent/Header.css";
-function Header() {
+import { TemaVerisi2 } from '../../App'
+
+
+function Header({ tema, deger, degistir }) {
   return (
-    <div className="navBar">
+    <div className="navBar" style={useContext(TemaVerisi2)}>
       <div className="nav_Link">
         <h1>Where in the world?</h1>
 
-        <p>
-          <span className="material-symbols-outlined">dark_mode</span>Dark Mode
+        <p onClick={degistir}>
+          <span className="material-symbols-outlined">dark_mode</span>{tema.dark === deger ? " Light Mode" : "Dark Mode"}
         </p>
       </div>
     </div>

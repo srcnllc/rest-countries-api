@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import '../CardComponent/Card.css'
+import { TemaVerisi } from '../../App'
 
 
-function Card() {
+
+function Card({ deger2 }) {
   const [countries, setCountries] = useState([])
   useEffect(() => {
     axios.get(`https://restcountries.com/v2/all`)
@@ -13,10 +15,10 @@ function Card() {
       })
   }, [])
   return (
-    <div className='Card'>
+    <div className='Card' style={useContext(TemaVerisi)}>
       {countries.map((item, index) => {
         return (
-          <div className='Card_item' key={index}>
+          <div className='Card_item' key={index} style={deger2}>
             <img src={item.flag} alt="img" />
             <h2>{item.name}</h2>
             <p><span>Population:</span>{item.population}</p>

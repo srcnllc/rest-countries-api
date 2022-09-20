@@ -1,7 +1,9 @@
 .Card{
+    width: 90%;
+    margin:0 auto;
     display: flex;
     flex-wrap:wrap;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 .Card_item{
     width: 250px;
@@ -30,3 +32,9 @@ p{
 p>span{
     font-weight: 800;
 }
+@media only screen and (max-width: 560px) {
+    .Card_item{
+        margin:20px auto;
+
+    }
+  }
