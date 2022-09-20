@@ -3,18 +3,16 @@ import axios from 'axios'
 import '../CardComponent/Card.css'
 import { TemaVerisi } from '../../App'
 
-
-
-function Card({ deger2, typing }) {
+function Card({ deger2, typing, select }) {
   const [countries, setCountries] = useState([])
 
   useEffect(() => {
     axios.get(`https://restcountries.com/v2/all`)
       .then(res => {
         console.log(res.data)
-        setCountries(res.data.filter(item => item.name.toUpperCase().includes(typing.toUpperCase())))
+        setCountries(typing != "" ? res.data.filter(item => item.name.toUpperCase().includes(typing.toUpperCase())) : res.data.filter(item => item.region.includes(select)))
       })
-  }, [typing])
+  }, [typing, select])
   return (
     <div className='Card' style={useContext(TemaVerisi)}>
       {countries.map((item, index) => {
