@@ -5,15 +5,16 @@ import { TemaVerisi } from '../../App'
 
 
 
-function Card({ deger2 }) {
+function Card({ deger2, typing }) {
   const [countries, setCountries] = useState([])
+
   useEffect(() => {
     axios.get(`https://restcountries.com/v2/all`)
       .then(res => {
         console.log(res.data)
-        setCountries(res.data)
+        setCountries(res.data.filter(item => item.name.toUpperCase().includes(typing.toUpperCase())))
       })
-  }, [])
+  }, [typing])
   return (
     <div className='Card' style={useContext(TemaVerisi)}>
       {countries.map((item, index) => {

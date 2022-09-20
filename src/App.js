@@ -28,7 +28,7 @@ export const TemaVerisi = React.createContext();
 export const TemaVerisi2 = React.createContext();
 
 function App() {
-
+  const [typing, setTyping] = useState(" ");
   const [deger, setDeger] = useState(tema.light);
   const [deger2, setDeger2] = useState(tema2.light);
 
@@ -47,16 +47,19 @@ function App() {
 
     }
   }
+  function typingStart(e) {
+    setTyping(e.target.value);
+    console.log(typing)
+  }
 
   return (
     <div className="App" >
       <TemaVerisi.Provider value={deger}>
         <TemaVerisi2.Provider value={deger2}>
-
           <Header degistir={degistir} tema={tema} deger={deger} />
           <div className='container' style={(deger)} >
-            <Search />
-            <Card deger2={deger2} />
+            <Search typingStart={typingStart} />
+            <Card deger2={deger2} typing={typing} />
           </div>
         </TemaVerisi2.Provider>
 

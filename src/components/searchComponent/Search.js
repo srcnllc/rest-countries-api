@@ -4,10 +4,10 @@ import { TemaVerisi2 } from '../../App'
 
 
 
-function Search() {
+function Search({ typingStart }) {
   return (
     <div className='SearchBar' >
-      <input type="text" placeholder="Search for a country ..." style={useContext(TemaVerisi2)} />
+      <input type="text" placeholder="Search for a country ..." style={useContext(TemaVerisi2)} onChange={typingStart} />
       <select style={useContext(TemaVerisi2)}>
         <option defaultValue="Filter by Region">Filter by Region</option>
         <option defaultValue="Affrica">Affrica</option>
