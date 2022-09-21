@@ -1,0 +1,110 @@
+.content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+.backDetail{
+    width: 90%;
+    padding: 30px;
+    margin: 0 auto;
+
+}
+button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid rgb(178, 176, 176);
+}
+button>img{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.contentDetail{
+    width:90%;
+    margin: 0 auto;
+    flex: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+.contentDetail .image{
+    width: 70%;
+    height: 60%;
+}
+.image>img {
+    width: 100%;
+    height: 100%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-around;
+    
+}
+.infoContent{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.infoContent p {
+    padding: 0;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content:start;
+    gap: 10px;
+}
+.buttons > .butonlar{
+    display: flex;
+    gap:10px;
+    padding:0;
+}
+.buttons > .butonlar >p{
+    border: 2px solid rgb(178, 176, 176);
+    margin:0;
+    padding:10px;
+    border-radius:2px;
+}
+@media only screen and (max-width: 560px) {
+    .content{
+        margin:0 auto;
+        height:auto;
+
+    }
+    .backDetail{
+        margin: 0 auto;
+    }
+    
+    .contentDetail{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        height:auto;
+    }
+    .contentDetail>.img{
+        width:90%;
+        margin:20px auto;
+    }
+    .infoContent{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .buttons{
+        display: grid;
+        grid-template-columns: auto ;
+        justify-content:start;
+        gap:0;
+    }
+    .buttons>p{
+        padding:0;
+    }
+  }

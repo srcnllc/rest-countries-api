@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import './App.css'
-import Card from './components/CardComponent/Card';
+import Content from './components/ContentComponent/Content';
 import Header from './components/HeaderComponent/Header';
 import Search from './components/searchComponent/Search';
+
+import {
+  BrowserRouter
+} from 'react-router-dom'
 
 const tema = {
   dark: {
@@ -17,7 +21,7 @@ const tema = {
 const tema2 = {
   dark: {
     color: "white",
-    backgroundColor: "#2b3945"
+    backgroundColor: "#2b3945",
   },
   light: {
     color: "black",
@@ -56,17 +60,16 @@ function App() {
   }
 
   return (
-    <div className="App" >
-      <TemaVerisi.Provider value={deger}>
-        <TemaVerisi2.Provider value={deger2}>
-          <Header degistir={degistir} tema={tema} deger={deger} />
-          <div className='container' style={(deger)} >
-            <Search typingStart={typingStart} getSelectValue={getSelectValue} />
-            <Card deger2={deger2} typing={typing} select={select} />
-          </div>
-        </TemaVerisi2.Provider>
-
-      </TemaVerisi.Provider >
+    <div className="App">
+      <BrowserRouter>
+        <TemaVerisi.Provider value={deger}>
+          <TemaVerisi2.Provider value={deger2}>
+            <Header degistir={degistir} tema={tema} deger={deger} />
+            <Search typingStart={typingStart} getSelectValue={getSelectValue} style={(deger)} />
+            <Content typing={typing} select={select} typingStart={typingStart} getSelectValue={getSelectValue} />
+          </TemaVerisi2.Provider>
+        </TemaVerisi.Provider >
+      </BrowserRouter>
     </div >
   );
 }

@@ -8,7 +8,6 @@ function Header({ tema, deger, degistir }) {
     <div className="navBar" style={useContext(TemaVerisi2)}>
       <div className="nav_Link">
         <h1>Where in the world?</h1>
-
         <p onClick={degistir}>
           <span className="material-symbols-outlined">dark_mode</span>{tema.dark === deger ? " Light Mode" : "Dark Mode"}
         </p>
