@@ -1,5 +1,6 @@
 .Card{
     width: 90%;
+    height: 100%;
     margin:0 auto;
     display: flex;
     flex-wrap:wrap;
@@ -8,11 +9,14 @@
 .Card_item{
     width: 250px;
     height: auto;
-    background-color:#fff;
     border-radius: 10px;
     margin-bottom: 50px;
     border:1px solid rgba(0, 0, 0, .1) ;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
+    text-decoration: none;
+}
+.link{
+    text-decoration:none; 
 }
 img{
     width: 100%;
@@ -35,5 +39,10 @@ p>span{
 @media only screen and (max-width: 560px) {
     .Card_item{
         margin:20px auto;
+    }
+    .link{
+        margin:0 auto;
+        text-decoration: none;
+
     }
   }

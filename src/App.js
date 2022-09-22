@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css'
 import Content from './components/ContentComponent/Content';
 import Header from './components/HeaderComponent/Header';
-import Search from './components/searchComponent/Search';
 
 import {
   BrowserRouter
@@ -32,11 +31,9 @@ export const TemaVerisi = React.createContext();
 export const TemaVerisi2 = React.createContext();
 
 function App() {
-  const [typing, setTyping] = useState("");
-  const [select, setSelect] = useState("")
+
   const [deger, setDeger] = useState(tema.light);
   const [deger2, setDeger2] = useState(tema2.light);
-
 
   function degistir() {
     if (tema.dark === deger) {
@@ -52,21 +49,13 @@ function App() {
 
     }
   }
-  function typingStart(e) {
-    setTyping(e.target.value);
-  }
-  function getSelectValue(e) {
-    setSelect(e.target.value)
-  }
-
   return (
     <div className="App">
       <BrowserRouter>
         <TemaVerisi.Provider value={deger}>
           <TemaVerisi2.Provider value={deger2}>
             <Header degistir={degistir} tema={tema} deger={deger} />
-            <Search typingStart={typingStart} getSelectValue={getSelectValue} style={(deger)} />
-            <Content typing={typing} select={select} typingStart={typingStart} getSelectValue={getSelectValue} />
+            <Content deger={deger} />
           </TemaVerisi2.Provider>
         </TemaVerisi.Provider >
       </BrowserRouter>
