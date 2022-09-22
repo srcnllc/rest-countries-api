@@ -107,4 +107,9 @@ button>img{
     .buttons>p{
         padding:0;
     }
+    .butonlar{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
   }
