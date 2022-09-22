@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import '../DetailComponent/Detail.css'
 import { TemaVerisi } from '../../App'
 import backIcon from './arrow_back.png'
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from 'axios'
 
 function Detail({ deger, deger2 }) {
@@ -19,7 +19,9 @@ function Detail({ deger, deger2 }) {
     return (
         <div className='content' style={useContext(TemaVerisi)}>
             <div className='backDetail'>
-                <button style={deger}><img src={backIcon} alt='icons' />Back</button>
+                <Link className='link' to={`/`}>
+                    <button style={deger}><img src={backIcon} alt='icons' />Back</button>
+                </Link>
             </div>
             <div className='contentDetail'>
                 <div className='image'>
