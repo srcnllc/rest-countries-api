@@ -1,10 +1,6 @@
 {
-<<<<<<< HEAD
   "homepage": "https://srcnllc.github.io/rest-countries-api",
-  "name": "rest-countries-api-with-color-theme-switcher-master",
-=======
   "name": "rest-countries-api",
->>>>>>> 36bcb55a3653306e2c9798db08662c2a35a8ce9c
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,11 +10,8 @@
     "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-router-dom": "^6.4.0",
-=======
     "react-router-dom": "^6.4.1",
->>>>>>> 36bcb55a3653306e2c9798db08662c2a35a8ce9c
+
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -26,13 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-<<<<<<< HEAD
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-=======
-    "eject": "react-scripts eject"
->>>>>>> 36bcb55a3653306e2c9798db08662c2a35a8ce9c
   },
   "eslintConfig": {
     "extends": [
@@ -51,11 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-=======
->>>>>>> 36bcb55a3653306e2c9798db08662c2a35a8ce9c
   }
 }
