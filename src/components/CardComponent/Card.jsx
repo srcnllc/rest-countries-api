@@ -32,7 +32,7 @@ function Card({ deger }) {
         {countries.map((item, index) => {
           return (
             <div className='Card_item' key={index} >
-              <Link className='link' to={`/${item.name}`} style={(deger)}>
+              <Link className='link' to={`/rest-countries-api/${item.name}`} style={(deger)}>
                 <img src={item.flag} alt="img" />
                 <h2 >{item.name}</h2>
                 <p><span>Population:</span>{item.population}</p>

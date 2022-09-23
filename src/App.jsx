@@ -34,6 +34,8 @@ function App() {
 
   const [deger, setDeger] = useState(tema.light);
   const [deger2, setDeger2] = useState(tema2.light);
+  
+
 
   function degistir() {
     if (tema.dark === deger) {
@@ -49,6 +51,7 @@ function App() {
 
     }
   }
+
   return (
     <div className="App">
       <BrowserRouter>

@@ -18,7 +18,7 @@ function Detail({ deger, deger2 }) {
     return (
         <div className='content' style={useContext(TemaVerisi)}>
             <div className='backDetail'>
-                <Link className='link' to={`/`}>
+                <Link className='link' to={`/rest-countries-api/`}>
                     <button style={deger}><img src={backIcon} alt='icons' />Back</button>
                 </Link>
             </div>
